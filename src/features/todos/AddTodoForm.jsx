@@ -25,34 +25,34 @@ const AddTodoForm = () => {
             setTitle("")
             setContent("")
         }
-    
+
     }, [selectedData])
 
     const submitHandle = (e) => {
-            addTodoMutation({
-                id: nanoid(),
-                title: title,
-                content: content
-            })
+        addTodoMutation({
+            title: title,
+            content: content
+        })
 
         setTitle("")
         setContent("")
 
         e.preventDefault();
     }
-    const updateTodo=()=>{
-        updateTodoMutation({
-            id:selectedData.id
-            ,title,content
-        })
+    const updateTodo = () => {
+    let data={
+        id:selectedData.id,
+        title:title,
+        content:content
+    }
+        updateTodoMutation( data)
         setSelectedData(null);
     }
 
 
-
     return (
         <div>
-            <Badge color={" w-100 mt-2 mb-2"} >
+            <Badge color={" w-100 mt-2 mb-2"}>
                 <h3 className={"header"}>Todo List</h3>
             </Badge>
             <Form onSubmit={submitHandle}>
