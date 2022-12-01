@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Navi from "../features/navigation/Navi";
 import {Container} from "reactstrap";
 import AddTodoForm from "../features/todos/AddTodoForm";
 import TodoList from "../features/todos/TododList";

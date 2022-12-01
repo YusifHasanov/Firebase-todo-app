@@ -1,11 +1,8 @@
-import React, {useContext, useEffect} from 'react';
-
+import React, {useContext} from 'react';
 import {Button, ListGroup, ListGroupItem} from "reactstrap";
 import {useSelector} from "react-redux";
 import {selectAllTodos, useDeleteTodoMutation} from "./todosSlice";
 import ContextApi from "../../Context";
-import {deleteDoc,doc} from "firebase/firestore";
-import {db} from "../../Firebase.config";
 
 
 const TodoList = () => {

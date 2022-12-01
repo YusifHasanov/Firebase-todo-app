@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Badge, Button, Form, FormGroup, Input, Label} from "reactstrap";
-import {nanoid} from "@reduxjs/toolkit";
 import {useAddTodoMutation, useUpdateTodoMutation} from "./todosSlice";
 import ContextApi from "../../Context";
 
